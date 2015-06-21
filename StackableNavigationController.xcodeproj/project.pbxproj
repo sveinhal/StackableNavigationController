@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2238FD171B3705BD00052B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238FD161B3705BD00052B4E /* AppDelegate.swift */; };
-		2238FD191B3705BD00052B4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238FD181B3705BD00052B4E /* ViewController.swift */; };
-		2238FD1C1B3705BD00052B4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2238FD1A1B3705BD00052B4E /* Main.storyboard */; };
+		2238FD191B3705BD00052B4E /* StackableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238FD181B3705BD00052B4E /* StackableNavigationController.swift */; };
 		2238FD1E1B3705BD00052B4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2238FD1D1B3705BD00052B4E /* Images.xcassets */; };
-		2238FD211B3705BD00052B4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2238FD1F1B3705BD00052B4E /* LaunchScreen.xib */; };
 		2238FD2D1B3705BD00052B4E /* StackableNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238FD2C1B3705BD00052B4E /* StackableNavigationControllerTests.swift */; };
+		2238FD381B3722B800052B4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238FD361B3722B800052B4E /* ViewController.swift */; };
+		2238FD391B3722B800052B4E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2238FD371B3722B800052B4E /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		2238FD111B3705BD00052B4E /* StackableNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackableNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2238FD151B3705BD00052B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2238FD161B3705BD00052B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2238FD181B3705BD00052B4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2238FD1B1B3705BD00052B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2238FD181B3705BD00052B4E /* StackableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackableNavigationController.swift; sourceTree = "<group>"; };
 		2238FD1D1B3705BD00052B4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2238FD201B3705BD00052B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2238FD261B3705BD00052B4E /* StackableNavigationControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackableNavigationControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2238FD2B1B3705BD00052B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2238FD2C1B3705BD00052B4E /* StackableNavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackableNavigationControllerTests.swift; sourceTree = "<group>"; };
+		2238FD361B3722B800052B4E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2238FD371B3722B800052B4E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				2238FD161B3705BD00052B4E /* AppDelegate.swift */,
-				2238FD181B3705BD00052B4E /* ViewController.swift */,
-				2238FD1A1B3705BD00052B4E /* Main.storyboard */,
+				2238FD181B3705BD00052B4E /* StackableNavigationController.swift */,
 				2238FD1D1B3705BD00052B4E /* Images.xcassets */,
-				2238FD1F1B3705BD00052B4E /* LaunchScreen.xib */,
 				2238FD141B3705BD00052B4E /* Supporting Files */,
+				2238FD361B3722B800052B4E /* ViewController.swift */,
+				2238FD371B3722B800052B4E /* ViewController.xib */,
 			);
 			path = StackableNavigationController;
 			sourceTree = "<group>";
@@ -156,6 +156,7 @@
 		2238FD091B3705BD00052B4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Svein Halvor Halvorsen";
 				TargetAttributes = {
@@ -192,8 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2238FD1C1B3705BD00052B4E /* Main.storyboard in Resources */,
-				2238FD211B3705BD00052B4E /* LaunchScreen.xib in Resources */,
+				2238FD391B3722B800052B4E /* ViewController.xib in Resources */,
 				2238FD1E1B3705BD00052B4E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2238FD191B3705BD00052B4E /* ViewController.swift in Sources */,
+				2238FD381B3722B800052B4E /* ViewController.swift in Sources */,
+				2238FD191B3705BD00052B4E /* StackableNavigationController.swift in Sources */,
 				2238FD171B3705BD00052B4E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,25 +235,6 @@
 			targetProxy = 2238FD271B3705BD00052B4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2238FD1A1B3705BD00052B4E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2238FD1B1B3705BD00052B4E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2238FD1F1B3705BD00052B4E /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2238FD201B3705BD00052B4E /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2238FD2E1B3705BD00052B4E /* Debug */ = {
@@ -411,6 +393,7 @@
 				2238FD321B3705BD00052B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2238FD331B3705BD00052B4E /* Build configuration list for PBXNativeTarget "StackableNavigationControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +402,7 @@
 				2238FD351B3705BD00052B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
