@@ -30,8 +30,8 @@ class StackableNavigationController: UIViewController {
         didSet {
             //don't animate adding/removing view controllers for now.
             UIView.performWithoutAnimation { [unowned self] in
-                let inserted = self.viewControllers.filter{!contains(oldValue, $0)}
-                let removed = oldValue.filter{!contains(self.viewControllers, $0)}
+                let inserted = self.viewControllers.filter{!oldValue.contains($0)}
+                let removed = oldValue.filter{!self.viewControllers.contains($0)}
                 for child in inserted {
                     self.insertViewController(child)
                 }
@@ -43,8 +43,8 @@ class StackableNavigationController: UIViewController {
                     self.selectedViewController = self.viewControllers.first
                 }
                 if let selected = self.selectedViewController {
-                    if !contains(self.viewControllers, selected) {
-                        let index = max(find(oldValue, selected)! - 1, 0)
+                    if !self.viewControllers.contains(selected) {
+                        let index = max(oldValue.indexOf(selected)! - 1, 0)
                         self.selectedViewController = self.viewControllers[index]
                     }
                 }
@@ -74,7 +74,7 @@ class StackableNavigationController: UIViewController {
             return
         }
         addChildViewController(viewController)
-        view.insertSubview(viewController.view, atIndex: find(viewControllers, viewController)!)
+        view.insertSubview(viewController.view, atIndex: viewControllers.indexOf(viewController)!)
         let tap = UITapGestureRecognizer(target: self, action: Selector("didTap:"))
         tap.cancelsTouchesInView = false
         viewController.navigationBar.addGestureRecognizer(tap)

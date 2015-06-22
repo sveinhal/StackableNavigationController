@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     @IBAction func remove(sender: AnyObject) {
         if let nav = navigationController,
             stack = nav.stackableNavigationController,
-            index = find(stack.viewControllers, nav)
+            index = stack.viewControllers.indexOf(nav)
         {
             if stack.viewControllers.count == 1 {
                 return
